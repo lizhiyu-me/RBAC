@@ -1,9 +1,9 @@
-import { layoutRoutes } from './../environments/routes';
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { RouterModule } from '@angular/router';
+import { layoutRoutes } from 'src/environments/routes';
 
 @NgModule({
-  imports: [RouterModule.forRoot(layoutRoutes)],
-  exports: [RouterModule],
+  imports: [RouterModule.forRoot(layoutRoutes, { relativeLinkResolution: 'legacy' })],
+  exports: [RouterModule]
 })
 export class AppRoutingModule {}

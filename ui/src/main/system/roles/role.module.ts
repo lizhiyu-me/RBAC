@@ -1,19 +1,19 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { OrganizationComponent } from './organization.component';
+import { RoleComponent } from './role.component';
 import { RouterModule } from '@angular/router';
 
 @NgModule({
-  declarations: [OrganizationComponent],
+  declarations: [RoleComponent],
   imports: [
     CommonModule,
     RouterModule.forChild([
       {
         path: '',
-        component: OrganizationComponent
-      }
-    ])
+        component: RoleComponent,
+      },
+    ]),
   ],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class OrganizationModule {}
+export class RoleModule {}
