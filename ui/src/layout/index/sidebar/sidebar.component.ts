@@ -1,4 +1,7 @@
+import { IndexService } from './../index.service';
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { XMenuNode } from '@ng-nest/ui';
+import { Observable, of } from 'rxjs';
 
 @Component({
   selector: 'app-sidebar',
@@ -6,7 +9,8 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
   encapsulation: ViewEncapsulation.None,
 })
 export class SidebarComponent implements OnInit {
-  constructor() {}
+  data: Observable<XMenuNode[]> = of(this.index.menus);
+  constructor(private index:IndexService ) {}
 
   ngOnInit(): void {}
 }

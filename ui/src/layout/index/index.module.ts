@@ -1,3 +1,4 @@
+import { mainRoutes } from './../../environments/routes';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IndexComponent } from './index.component';
@@ -22,9 +23,10 @@ import { TabsComponent } from './tabs/tabs.component';
       {
         path: '',
         component: IndexComponent,
+        children: mainRoutes
       },
     ]),
   ],
   exports: [RouterModule],
 })
-export class IndexModule {}
+export class IndexModule { }
